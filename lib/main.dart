@@ -11,7 +11,7 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
-      body: Container(),
+      body: Container(child: Image.asset('img/logo.png')),
     ));
   }
 }
