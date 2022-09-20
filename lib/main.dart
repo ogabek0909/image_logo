@@ -12,16 +12,10 @@ class LoginPage extends StatelessWidget {
     return MaterialApp(
         home: Scaffold(
             body: Center(
-      child: Container(
-        color: Colors.redAccent,
-        child: Image.asset(
-          'img/logo.png',
-          width: 300,
-          height: 290,
-          fit: BoxFit.none,
-          cacheHeight: 450,
-          alignment: Alignment.bottomCenter,
-        ),
+      child: Image.asset(
+        'img/google.png',
+        width: 200,
+        height: 200,
       ),
     )));
   }
