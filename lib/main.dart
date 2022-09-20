@@ -11,9 +11,10 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
-      body: Container(
-          child: Image.network(
-              'https://storage.googleapis.com/cms-storage-bucket/c823e53b3a1a7b0d36a9.png')),
-    ));
+            body: Center(
+      child: Image.asset(
+        'img/logo.png',
+      ),
+    )));
   }
 }
