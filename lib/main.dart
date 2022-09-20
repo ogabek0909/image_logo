@@ -20,6 +20,7 @@ class LoginPage extends StatelessWidget {
           height: 290,
           fit: BoxFit.none,
           cacheHeight: 450,
+          alignment: Alignment.bottomCenter,
         ),
       ),
     )));
