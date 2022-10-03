@@ -1,17 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:image_logo/pages/registerPage.dart';
 
 void main() {
-  runApp(const LoginPage());
+  runApp(
+    MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: HomePage(),
+      routes: {
+        '/home':(context) => HomePage(),
+        '/registerPage':(context) => RegesterPage()
+      },
+    )
+  );
 }
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({Key? key}) : super(key: key);
+class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
 
   @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-        home: Scaffold(
+    return  Scaffold(
             backgroundColor: Colors.white,
             body: Container(
               padding: EdgeInsets.only(top: 30,bottom: 10,right: 20,left: 20),
@@ -62,7 +75,11 @@ class LoginPage extends StatelessWidget {
                     children: [
                       Expanded(
                         child: TextButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              setState(() {
+                                Navigator.pushNamed(context, '/registerPage');
+                              });
+                            },
                             child: Container(
                               height: 60,
                               decoration: BoxDecoration(
@@ -88,6 +105,6 @@ class LoginPage extends StatelessWidget {
                   )
                 ],
               ),
-            )));
+            ));
   }
 }
